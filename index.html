@@ -1,9 +1,88 @@
-<html>
-
-<body>
-  <h1>Dayton Conwell</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://media1.tenor.com/m/xcN8PoSbJBkAAAAd/peace-kai-cenat.gif" />
-</body>
-
-</html>
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#020617">
+  <meta name="description" content="Dayton Conwell's system dashboard — production software, applied AI, research, and selected work.">
+  <meta property="og:title" content="DAYTON / SYSTEM"><meta property="og:description" content="Software engineering, research, and selected work by Dayton Conwell."><meta property="og:type" content="website"><meta property="og:url" content="https://conwelld.github.io/"><meta property="og:image" content="https://conwelld.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DAYTON / SYSTEM"><meta name="twitter:description" content="Software engineering, research, and selected work by Dayton Conwell."><meta name="twitter:image" content="https://conwelld.github.io/og.png">
+  <title>DAYTON / SYSTEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="boot-screen" aria-hidden="true"><div class="boot-mark"><span></span><span></span><span></span><span></span></div><p>INITIALIZING PERSONAL ARCHIVE</p></div>
+  <div class="ambient" aria-hidden="true"><div class="horizon"></div><div class="orb one"></div><div class="orb two"></div></div>
+  <div class="shell">
+    <header class="system-bar"><a class="wordmark" href="#home" data-route="home" aria-label="Dayton system home"><span class="wordmark-glyph" aria-hidden="true">D</span><span><strong>DAYTON</strong><small>PERSONAL SYSTEM</small></span></a><div class="system-status"><span class="status-dot" aria-hidden="true"></span><span>ONLINE</span><time id="clock">--:--</time></div></header>
+    <nav class="main-nav" aria-label="Main menu">
+      <button class="nav-item is-active" type="button" data-route="home" aria-current="page"><span class="nav-symbol home-icon" aria-hidden="true"></span><span>Home</span></button>
+      <button class="nav-item" type="button" data-route="projects"><span class="nav-symbol projects-icon" aria-hidden="true"></span><span>Projects</span></button>
+      <button class="nav-item" type="button" data-route="profile"><span class="nav-symbol profile-icon" aria-hidden="true"></span><span>Profile</span></button>
+      <button class="nav-item" type="button" data-route="connect"><span class="nav-symbol connect-icon" aria-hidden="true"></span><span>Connect</span></button>
+    </nav>
+    <main id="main-content" tabindex="-1">
+      <section class="screen is-active" id="home" data-screen="home" aria-labelledby="home-title">
+        <div class="home-layout">
+          <div class="hero-copy">
+            <p class="eyebrow"><span>PLAYER 01</span> / SOFTWARE DEVELOPER</p>
+            <h1 id="home-title">Dayton<br><em>Conwell</em></h1>
+            <p class="hero-intro">I build production web systems, research the seams between code and data, and design tools that help people learn.</p>
+            <div class="hero-actions">
+              <button class="console-button primary" type="button" data-route="projects"><span class="button-icon cross" aria-hidden="true"></span>Load projects</button>
+              <button class="console-button" type="button" data-route="profile"><span class="button-icon circle" aria-hidden="true"></span>View profile</button>
+            </div>
+          </div>
+          <aside class="now-panel" aria-label="Current status">
+            <div class="panel-number">01</div><p class="panel-label">CURRENT QUEST</p>
+            <h2>Building safer practice for technical interviews.</h2>
+            <p>Rung combines timed coding sessions, skill diagnostics, and an AI interviewer designed to guide without giving answers away.</p>
+            <div class="signal-line"><span></span></div>
+            <dl class="quick-stats"><div><dt>Base</dt><dd>Berea College</dd></div><div><dt>Grad</dt><dd>May 2028</dd></div><div><dt>Focus</dt><dd>Applied AI</dd></div></dl>
+          </aside>
+        </div>
+        <button class="next-prompt" type="button" data-route="projects"><span>Browse archive</span><span aria-hidden="true">→</span></button>
+      </section>
+      <section class="screen" id="projects" data-screen="projects" aria-labelledby="projects-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow"><span>MEMORY ARCHIVE</span> / 04 SLOTS</p><h2 id="projects-title">Selected work</h2></div><p>Choose a save slot to inspect the build.</p></div>
+        <div class="project-browser">
+          <div class="project-list" role="list" aria-label="Projects">
+            <button class="project-slot is-selected" type="button" role="listitem" data-project="rung" aria-pressed="true"><span class="slot-index">01</span><span class="slot-mark square" aria-hidden="true"></span><span class="slot-copy"><strong>Rung</strong><small>AI interview platform · 2026</small></span><span class="slot-arrow" aria-hidden="true">›</span></button>
+            <button class="project-slot" type="button" role="listitem" data-project="ssdt" aria-pressed="false"><span class="slot-index">02</span><span class="slot-mark triangle" aria-hidden="true"></span><span class="slot-copy"><strong>SSDT Systems</strong><small>Two production apps · Team</small></span><span class="slot-arrow" aria-hidden="true">›</span></button>
+            <button class="project-slot" type="button" role="listitem" data-project="orm" aria-pressed="false"><span class="slot-index">03</span><span class="slot-mark circle" aria-hidden="true"></span><span class="slot-copy"><strong>ORM Research</strong><small>CS capstone · Active</small></span><span class="slot-arrow" aria-hidden="true">›</span></button>
+            <button class="project-slot" type="button" role="listitem" data-project="neetcode" aria-pressed="false"><span class="slot-index">04</span><span class="slot-mark cross" aria-hidden="true"></span><span class="slot-copy"><strong>NeetCode Archive</strong><small>Python · Public repo</small></span><span class="slot-arrow" aria-hidden="true">›</span></button>
+          </div>
+          <article class="project-detail" aria-live="polite">
+            <div class="project-visual" aria-hidden="true"><div class="project-emblem"><span></span><i></i></div><span class="visual-code">RUNG_01</span></div>
+            <div class="project-copy"><p class="project-kicker">APPLIED AI / PERSONAL PROJECT</p><h3>Rung</h3><p class="project-summary">A timed mock coding interview platform with skill diagnostics and an AI interviewer that guides students without revealing solutions.</p><ul class="project-points"><li>Zero answer leaks across a 177-case adversarial suite</li><li>Reduced projected API cost by 90%</li><li>100+ offline tests with external calls stubbed</li></ul><div class="tag-list" aria-label="Technologies"><span>Python</span><span>Flask</span><span>Peewee</span><span>SQLite</span><span>Anthropic API</span></div><p class="project-note">Built and deployed in August 2026.</p></div>
+          </article>
+        </div>
+      </section>
+      <section class="screen" id="profile" data-screen="profile" aria-labelledby="profile-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow"><span>PLAYER PROFILE</span> / DAYTON.CONWELL</p><h2 id="profile-title">About this player</h2></div><p>Student, builder, researcher, teammate.</p></div>
+        <div class="profile-grid">
+          <article class="profile-card bio-card">
+            <div class="avatar-monogram" aria-hidden="true"><span>DC</span></div>
+            <div><p class="panel-label">ORIGIN STORY</p><h3>Curious about how software works—and who it works for.</h3><p>I'm a Computer &amp; Information Science student at Berea College, graduating in May 2028. I build production web systems, research object-relational mapping, and coach students through software design and debugging.</p></div>
+          </article>
+          <article class="profile-card experience-card">
+            <p class="panel-label">ACTIVE ROLES</p>
+            <div class="timeline-item"><span>2026</span><div><h3>Software Developer</h3><p>Berea College IS&amp;S · Jun–Aug</p></div></div>
+            <div class="timeline-item"><span>NOW</span><div><h3>Teaching Assistant</h3><p>Software Design &amp; Implementation · 100+ students coached</p></div></div>
+            <div class="timeline-item"><span>2028</span><div><h3>B.A. Computer &amp; Information Science</h3><p>Berea College · Expected May</p></div></div>
+          </article>
+          <article class="profile-card stack-card"><p class="panel-label">EQUIPMENT / TECH STACK</p><div class="stack-groups"><div><span>Languages</span><p>Python · Java · C · C++ · JavaScript · SQL · HTML/CSS</p></div><div><span>Systems</span><p>Flask · Peewee · Jinja · MySQL · SQLite · REST APIs</p></div><div><span>Delivery</span><p>GitHub Actions · Docker · Gunicorn · Render · Linux · Unit Testing</p></div></div></article>
+          <article class="profile-card focus-card"><p class="panel-label">PROOF POINTS / VERIFIED</p><div class="focus-ring" aria-hidden="true"><span>04</span></div><ul><li>100+ students coached</li><li>2 production applications</li><li>177 adversarial AI tests</li><li>90% projected API savings</li></ul></article>
+        </div>
+      </section>
+      <section class="screen" id="connect" data-screen="connect" aria-labelledby="connect-title" hidden>
+        <div class="connect-layout">
+          <div><p class="eyebrow"><span>NETWORK LINK</span> / OPEN CHANNEL</p><h2 id="connect-title">Let's build<br>something <em>useful.</em></h2><p class="connect-intro">Questions, opportunities, strange ideas—reach out on one of my public channels.</p></div>
+          <div class="connection-list">
+            <a href="https://www.linkedin.com/in/dayton-conwell/" target="_blank" rel="noreferrer"><span class="connection-icon">in</span><span><small>LINKEDIN</small><strong>dayton-conwell</strong></span><i aria-hidden="true">↗</i></a>
+            <a href="https://github.com/conwelld" target="_blank" rel="noreferrer"><span class="connection-icon">git</span><span><small>GITHUB</small><strong>@conwelld</strong></span><i aria-hidden="true">↗</i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="control-hints" aria-label="Controls"><span><i class="hint-cross" aria-hidden="true"></i>Select</span><span><i class="hint-circle" aria-hidden="true"></i>Navigate</span><span class="footer-id">DC_OS · BUILD 2026.08</span></footer>
+  </div>
+</body></html>
