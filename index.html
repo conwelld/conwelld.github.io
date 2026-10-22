@@ -6,7 +6,7 @@
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DAYTON / SYSTEM"><meta name="twitter:description" content="Software engineering, research, and selected work by Dayton Conwell."><meta name="twitter:image" content="https://conwelld.github.io/og.png">
   <title>DAYTON / SYSTEM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><script src="posts.js" defer></script><script src="app.js" defer></script>
 </head><body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="boot-screen" aria-hidden="true"><div class="boot-mark"><span></span><span></span><span></span><span></span></div><p>INITIALIZING PERSONAL ARCHIVE</p></div>
@@ -16,6 +16,7 @@
     <nav class="main-nav" aria-label="Main menu">
       <button class="nav-item is-active" type="button" data-route="home" aria-current="page"><span class="nav-symbol home-icon" aria-hidden="true"></span><span>Home</span></button>
       <button class="nav-item" type="button" data-route="projects"><span class="nav-symbol projects-icon" aria-hidden="true"></span><span>Projects</span></button>
+      <button class="nav-item" type="button" data-route="blog"><span class="nav-symbol blog-icon" aria-hidden="true"></span><span>Blog</span></button>
       <button class="nav-item" type="button" data-route="profile"><span class="nav-symbol profile-icon" aria-hidden="true"></span><span>Profile</span></button>
       <button class="nav-item" type="button" data-route="connect"><span class="nav-symbol connect-icon" aria-hidden="true"></span><span>Connect</span></button>
     </nav>
@@ -55,6 +56,19 @@
             <div class="project-copy"><p class="project-kicker">APPLIED AI / PERSONAL PROJECT</p><h3>Rung</h3><p class="project-summary">A timed mock coding interview platform with skill diagnostics and an AI interviewer that guides students without revealing solutions.</p><ul class="project-points"><li>Zero answer leaks across a 177-case adversarial suite</li><li>Reduced projected API cost by 90%</li><li>100+ offline tests with external calls stubbed</li></ul><div class="tag-list" aria-label="Technologies"><span>Python</span><span>Flask</span><span>Peewee</span><span>SQLite</span><span>Anthropic API</span></div><p class="project-note">Built and deployed in August 2026.</p></div>
           </article>
         </div>
+      </section>
+      <section class="screen" id="blog" data-screen="blog" aria-labelledby="blog-title" hidden>
+        <div class="blog-index">
+          <div class="section-heading"><div><p class="eyebrow"><span>DEV LOG</span> / <b class="blog-count">00 ENTRIES</b></p><h2 id="blog-title">Blog</h2></div><p>Biweekly entries for my open source software engineering course.</p></div>
+          <ol class="post-list" aria-label="Blog posts"></ol>
+        </div>
+        <article class="post-view" aria-labelledby="post-title" hidden>
+          <a class="post-back" href="#blog"><span aria-hidden="true">‹</span>All entries</a>
+          <header class="post-header"><p class="project-kicker"></p><h3 id="post-title" tabindex="-1"></h3><dl class="post-meta"></dl><div class="tag-list" aria-label="Topics"></div></header>
+          <details class="post-prompt"><summary>Assignment prompt</summary><div class="post-prompt-body"></div></details>
+          <div class="post-body"></div>
+          <nav class="post-pager" aria-label="More entries"></nav>
+        </article>
       </section>
       <section class="screen" id="profile" data-screen="profile" aria-labelledby="profile-title" hidden>
         <div class="section-heading"><div><p class="eyebrow"><span>PLAYER PROFILE</span> / DAYTON.CONWELL</p><h2 id="profile-title">About this player</h2></div><p>Student, builder, researcher, teammate.</p></div>
