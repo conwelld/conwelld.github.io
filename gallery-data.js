@@ -28,59 +28,80 @@ window.GALLERY = {
   eyebrow: "Works on paper & screen",
   subtitle: "Drawings, sketches and digital pieces. Walk the hall and stop at anything that catches your eye.",
   statement:
-    "PLACEHOLDER: replace this with a few sentences about you as an artist. What you draw, what you keep coming back to, and how making art connects to the rest of what you build.\n\nA second paragraph can go here if you want one.",
+    "I've been drawing on and off for about four years, mostly in sketchbooks. A lot of what hangs here are studies: I copy pages and panels from manga and comics I love to learn how those artists build a face, an expression or a burst of motion. The rest is fan art of characters I keep coming back to.\n\nEvery piece is credited to the series or creator it comes from.",
 
   pieces: [
     {
-      image: null,
-      title: "Placeholder 01",
-      year: "2025",
+      image: "art/the-maxx.jpg",
+      title: "The Maxx",
+      year: "2025–26",
+      medium: "Digital ink",
+      story: "Fan art of The Maxx, created by Sam Kieth.",
+      alt: "Black-and-white digital ink drawing of a hulking, clawed figure crouched against a round white glow inside a heavy black frame."
+    },
+    {
+      image: "art/wolverine-snikt-collage.jpg",
+      title: "Wolverine Snikt! Collage",
+      year: "2025–26",
       medium: "Graphite on paper",
-      size: "9 × 12 in",
-      story: "Replace this with the story behind the piece: what it is, when you made it, and what you were trying out.",
-      alt: ""
+      story: "Study after Wolverine: Snikt! by Tsutomu Nihei.",
+      alt: "Pencil collage of spiky-haired figures in long coats, one baring claws in the foreground."
     },
     {
-      image: null,
-      title: "Placeholder 02",
-      year: "2025",
-      medium: "Digital · Procreate",
-      story: "Replace this with the story behind the piece.",
-      alt: ""
+      image: "art/hajime-no-ippo-sketches.jpg",
+      title: "Hajime no Ippo Sketches",
+      year: "2025–26",
+      medium: "Ink pen on paper",
+      story: "Study after Hajime no Ippo by George Morikawa.",
+      alt: "Ink page of three stacked boxing panels drawn with dense hatching and speed lines, building to a knockout punch."
     },
     {
-      image: null,
-      title: "Placeholder 03",
-      year: "2024",
-      medium: "Ink on paper",
-      size: "8.5 × 11 in",
-      story: "Replace this with the story behind the piece.",
-      alt: ""
+      image: "art/gambit-rogue-profiles.jpg",
+      title: "Gambit & Rogue Profiles",
+      year: "2025–26",
+      medium: "Graphite on paper",
+      story: "Study of Gambit and Rogue from Marvel's X-Men.",
+      alt: "Pencil sketch of two faces in profile, one looking ahead and one below it gazing upward, with construction lines still visible."
     },
     {
-      image: null,
-      title: "Placeholder 04",
-      year: "2024",
-      medium: "Digital",
-      story: "Replace this with the story behind the piece.",
-      alt: ""
+      image: "art/beta-ray-bill.jpg",
+      title: "Beta Ray Bill",
+      year: "2025–26",
+      medium: "Ink pen on paper",
+      story: "Study of Beta Ray Bill, created by Walt Simonson for Marvel.",
+      alt: "Ink drawing of a horned, caped figure with a fur collar lunging toward the viewer, with a small pencil sketch above."
     },
     {
-      image: null,
-      title: "Placeholder 05",
-      year: "2024",
-      medium: "Charcoal on paper",
-      size: "18 × 24 in",
-      story: "Replace this with the story behind the piece.",
-      alt: ""
+      image: "art/wolverine.jpg",
+      title: "Wolverine",
+      year: "2025–26",
+      medium: "Graphite on paper",
+      story: "Study of Wolverine (Marvel).",
+      alt: "Detailed pencil drawing of a tiger-striped figure with long claws crouched on top of a tree stump."
     },
     {
-      image: null,
-      title: "Placeholder 06",
-      year: "2023",
-      medium: "Digital",
-      story: "Replace this with the story behind the piece.",
-      alt: ""
+      image: "art/baki.jpg",
+      title: "Baki",
+      year: "2025–26",
+      medium: "Graphite on paper",
+      story: "Fan art of Baki, from Baki the Grappler by Keisuke Itagaki.",
+      alt: "Pencil sketch of a scowling face with messy hair, surrounded by partial head studies."
+    },
+    {
+      image: "art/rammatra.jpg",
+      title: "Rammatra",
+      year: "2025–26",
+      medium: "Graphite on paper",
+      story: "Fan art of Rammatra.",
+      alt: "Pencil drawing of an armored figure with a riveted helmet and hair sweeping back."
+    },
+    {
+      image: "art/akira-collage.jpg",
+      title: "Akira Collage",
+      year: "2025–26",
+      medium: "Graphite on paper",
+      story: "Study after Akira by Katsuhiro Otomo.",
+      alt: "Pencil collage of a figure bursting apart at the top of the page and two faces below, one in glasses and one screaming."
     }
   ]
 };

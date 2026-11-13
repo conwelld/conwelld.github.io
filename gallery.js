@@ -873,8 +873,10 @@ function markViewed(i) {
 }
 
 function openInspect(i) {
-  if (!PIECES.length || !ARTS[i]) return;
-  insp.i = (i + PIECES.length) % PIECES.length;
+  if (!PIECES.length) return;
+  i = (i + PIECES.length) % PIECES.length;   // wrap before the lookup so Previous on #1 / Next on the last piece work
+  if (!ARTS[i]) return;
+  insp.i = i;
   const p = PIECES[insp.i], art = ARTS[insp.i];
   const count = $("#insp-count");
   count.replaceChildren();
