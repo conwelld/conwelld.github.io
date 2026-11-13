@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#020617">
+  <meta name="description" content="Walk through Dayton Conwell's art gallery: drawings, sketches and digital work hung along a first-person night-museum hallway.">
+  <meta property="og:title" content="DAYTON / GALLERY"><meta property="og:description" content="Drawings, sketches and digital work by Dayton Conwell. Walk the hall."><meta property="og:type" content="website"><meta property="og:url" content="https://conwelld.github.io/gallery.html"><meta property="og:image" content="https://conwelld.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DAYTON / GALLERY"><meta name="twitter:description" content="Drawings, sketches and digital work by Dayton Conwell. Walk the hall."><meta name="twitter:image" content="https://conwelld.github.io/og.png">
+  <title>DAYTON / GALLERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="gallery-data.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script type="module" src="gallery.js"></script>
+</head><body>
+  <canvas id="hall" tabindex="-1" aria-label="First-person view of the gallery hallway. Use the arrow keys to walk and turn, Enter to inspect a piece, or open the index for a list of every piece."></canvas>
+  <div class="g-fx" aria-hidden="true"></div>
+
+  <div class="g-hud" id="hud" hidden>
+    <div class="g-loc g-panel" aria-hidden="true">
+      <p><span>GALLERY</span> · 1F</p>
+      <strong id="loc-name">Entrance</strong>
+      <small id="loc-sub">Lobby</small>
+    </div>
+
+    <div class="g-top-right">
+      <div class="g-status g-panel" aria-hidden="true">
+        <span class="g-compass"><b id="compass">N</b></span>
+        <span class="g-viewed"><small>VIEWED</small><strong id="viewed">0/0</strong></span>
+      </div>
+      <div class="g-actions">
+        <button class="g-btn" id="btn-sound" type="button" aria-pressed="false" title="Sound"><svg class="g-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6h3l4-3v10l-4-3H2z"/><path class="g-wave" d="M11.5 5.5a3.5 3.5 0 0 1 0 5M13.5 3.5a6.5 6.5 0 0 1 0 9"/></svg><span class="g-label" id="sound-label">Sound off</span></button>
+        <button class="g-btn" id="btn-index" type="button" title="Index of every piece (L)"><svg class="sym sym-tri" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.2 14.6 13.6H1.4Z"/></svg><span class="g-label">Index</span></button>
+        <a class="g-btn" href="index.html" title="Back to the dashboard"><span class="sym sym-circle" aria-hidden="true"></span><span class="g-label">Exit</span></a>
+      </div>
+    </div>
+
+    <div class="g-map" aria-hidden="true"><span class="g-map-floor">1F</span><canvas id="minimap"></canvas></div>
+
+    <button class="g-prompt" id="prompt" type="button" hidden><span class="sym sym-cross" aria-hidden="true"></span><span id="prompt-action">Inspect</span><strong id="prompt-title"></strong></button>
+
+    <div class="g-pad" role="group" aria-label="Movement controls">
+      <button type="button" class="up" data-act="forward" aria-label="Step forward">▲</button>
+      <button type="button" class="left" data-act="left" aria-label="Turn left">◀</button>
+      <button type="button" class="use" data-act="use" aria-label="Inspect"><span class="sym sym-cross" aria-hidden="true"></span></button>
+      <button type="button" class="right" data-act="right" aria-label="Turn right">▶</button>
+      <button type="button" class="down" data-act="back" aria-label="Step back">▼</button>
+    </div>
+
+    <footer class="g-hints g-panel" aria-label="Controls">
+      <span><kbd>↑</kbd><kbd>↓</kbd>Step</span>
+      <span><kbd>←</kbd><kbd>→</kbd>Turn</span>
+      <span><kbd>Q</kbd><kbd>E</kbd>Sidestep</span>
+      <span><kbd>Enter</kbd>Inspect</span>
+      <span><kbd>L</kbd>Index</span>
+    </footer>
+  </div>
+
+  <section class="g-intro" id="intro" aria-labelledby="intro-title">
+    <div class="g-intro-inner">
+      <p class="eyebrow"><span>GALLERY</span> / <span class="muted" id="intro-eyebrow">WORKS ON PAPER &amp; SCREEN</span></p>
+      <h1 id="intro-title"><span id="intro-first">Dayton</span><br><em id="intro-last">Conwell</em></h1>
+      <p class="g-intro-copy" id="intro-sub">Drawings, sketches and digital pieces.</p>
+      <div class="g-intro-actions">
+        <button class="console-button primary" id="enter" type="button" disabled><span class="sym sym-cross" aria-hidden="true"></span><span id="enter-label">Hanging pieces…</span></button>
+        <button class="console-button" id="intro-index" type="button" disabled><svg class="sym sym-tri" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.2 14.6 13.6H1.4Z"/></svg>View as a list</button>
+        <a class="console-button" href="index.html"><span class="sym sym-circle" aria-hidden="true"></span>Back to dashboard</a>
+      </div>
+      <p class="g-intro-note" id="intro-note"></p>
+      <ul class="g-intro-keys" aria-label="Controls">
+        <li><kbd>↑</kbd><kbd>↓</kbd> step</li>
+        <li><kbd>←</kbd><kbd>→</kbd> turn</li>
+        <li><kbd>Enter</kbd> inspect a piece</li>
+        <li><kbd>L</kbd> index</li>
+        <li class="touch-only">swipe or use the pad on touch screens</li>
+      </ul>
+    </div>
+  </section>
+
+  <dialog class="g-inspect" id="inspect" aria-labelledby="insp-title">
+    <div class="g-stage" id="stage">
+      <img id="insp-img" alt="" draggable="false">
+      <div class="g-zoom g-panel" role="group" aria-label="Zoom">
+        <button class="g-btn" type="button" data-zoom="out" aria-label="Zoom out">−</button>
+        <output id="zoom-level" aria-live="polite">100%</output>
+        <button class="g-btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
+        <button class="g-btn" type="button" data-zoom="fit">Fit</button>
+      </div>
+      <p class="g-zoom-hint">Scroll or pinch to zoom · drag to look around</p>
+    </div>
+    <aside class="g-placard">
+      <div class="g-placard-top">
+        <p class="eyebrow" id="insp-count"><span>PIECE 01</span> / 01</p>
+        <button class="g-btn" type="button" data-close><span class="sym sym-circle" aria-hidden="true"></span>Back</button>
+      </div>
+      <h2 id="insp-title" tabindex="-1" autofocus>Title</h2>
+      <dl class="g-meta" id="insp-meta"></dl>
+      <div class="g-story" id="insp-story"></div>
+      <div class="g-placard-nav">
+        <button class="g-btn" type="button" data-step="-1">← Previous</button>
+        <button class="g-btn" type="button" data-step="1">Next →</button>
+      </div>
+    </aside>
+  </dialog>
+
+  <dialog class="g-sheet" id="panel" aria-labelledby="panel-title">
+    <div class="g-sheet-top">
+      <p class="eyebrow" id="panel-eyebrow"></p>
+      <button class="g-btn" type="button" data-close><span class="sym sym-circle" aria-hidden="true"></span>Back</button>
+    </div>
+    <h2 id="panel-title" tabindex="-1" autofocus></h2>
+    <div class="g-sheet-body" id="panel-body"></div>
+  </dialog>
+
+  <dialog class="g-sheet g-index" id="index" aria-labelledby="index-title">
+    <div class="g-sheet-top">
+      <div><p class="eyebrow"><span>INDEX</span> / ALL PIECES</p><h2 id="index-title" tabindex="-1" autofocus>The collection</h2></div>
+      <button class="g-btn" type="button" data-close><span class="sym sym-circle" aria-hidden="true"></span>Back</button>
+    </div>
+    <div class="g-index-grid" id="index-grid"></div>
+  </dialog>
+
+  <p class="sr-only" id="announce" aria-live="polite"></p>
+  <noscript><p class="g-noscript">The walk-through gallery needs JavaScript. <a href="index.html">Back to the dashboard</a>.</p></noscript>
+</body></html>
